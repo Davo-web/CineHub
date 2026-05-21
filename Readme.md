@@ -27,24 +27,7 @@ CineHub — современный веб-интерфейс для поиска
 
 ## Структура проекта
 
-```bash
-project/
-│
-├── css/
-│   ├── reset.css
-│   ├── variables.css
-│   ├── style.css
-│   └── components/
-│       ├── header.css
-│       ├── search.css
-│       └── header-actions.css
-│
-├── js/
-│   └── script.js
-│
-├── index.html
-└── README.md
-```
+...Рассматривается переход на SCSS
 
 ---
 
