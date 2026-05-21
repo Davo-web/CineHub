@@ -1,0 +1,16 @@
+.sidebar__theme-btn {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #1D222D;    
+    padding: 10px 20px;
+    border-radius: 10px;
+    width: 90%;
+    font-size: 14px;
+}
+
+.sidebar__theme-btn svg {
+    width: 25px;
+    height: 25px;
+}

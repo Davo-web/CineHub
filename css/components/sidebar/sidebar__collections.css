@@ -1,0 +1,60 @@
+.collections__title {
+    position: relative;
+    left: 10px;
+    color: var(--color-subtext);
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.collections__list {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    margin-bottom: 10px;
+}
+
+.collections__item {
+    padding: 5px 10px;
+}
+
+.collections__item.active {
+    background-color: var(--color-bg-active);
+    border-radius: 10px;
+}
+
+.collections__item.active .collections__link  {
+    color: var(--color-element-active);
+}
+
+.collections__link {
+    font-size: 14px;
+    color: var(--color-text);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.collections__link svg {
+    width: 25px;
+    height: 25px;
+}
+
+.collections__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+    color: var(--color-subtext);
+    font-size: 12px;
+    padding: 5px 10px;
+}
+
+.collections__btn:hover {
+    border-radius: 10px;
+    background-color: rgb(109, 104, 104, .2);
+}
+
+.collections__btn svg {
+    width: 25px;
+    height: 25px;
+}
