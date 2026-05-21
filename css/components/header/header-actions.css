@@ -1,0 +1,19 @@
+.header-actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.header-actions__notifications {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-actions__settings {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
