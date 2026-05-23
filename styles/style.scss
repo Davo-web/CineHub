@@ -1,19 +1,20 @@
+@use 'variables' as *;
+
+@use 'components/header/header';
+@use 'components/header/search.scss';
+@use 'components/header/header-actions.scss';
+
+@use 'components/sidebar/sidebar.scss';
+@use 'components/sidebar/sidebar__logo.scss';
+@use 'components/sidebar/sidebar__nav.scss';
+@use 'components/sidebar/sidebar__collections.scss';
+@use 'components/sidebar/sidebar__theme-btn.scss';
+@use 'components/sidebar/sidebar__profile.scss';
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap');
-@import url(./variables.css);
-
-@import url(./components/header/header.css);
-@import url(./components/header/search.css);
-@import url(./components/header/header-actions.css);
-
-@import url(./components/sidebar/sidebar.css);
-@import url(./components/sidebar/sidebar__logo.css);
-@import url(./components/sidebar/sidebar__nav.css);
-@import url(./components/sidebar/sidebar__collections.css);
-@import url(./components/sidebar/sidebar__theme-btn.css);
-@import url(./components/sidebar/sidebar__profile.css);
 
 body {
-    font-family: 'Inter', serif;
+    font-family: 'Inter', sans-serif;
     background-color: var(--color-bg);
     color: var(--color-text);
 }
@@ -25,7 +26,6 @@ body {
     grid-template-rows: 70px 1fr;
     grid-template-areas: 
     "sidebar header header"
-    "sidebar main widget-panel"
     "sidebar main widget-panel";
 }
 

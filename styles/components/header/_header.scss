@@ -1,0 +1,7 @@
+@use '../../mixins' as *;
+
+header {
+    width: 100%;
+    @include flex-center($justify: space-between);
+    padding: 20px 40px;
+}

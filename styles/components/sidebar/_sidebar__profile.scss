@@ -1,0 +1,33 @@
+@use '../../mixins' as *;
+
+.profile {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 15px 5px;
+    @include flex-center;
+    gap: 10px;
+    background-color: var(--color-bg3);
+
+    &__avatar {
+        width: 40px;
+        height: 40px;
+        border-radius: 100%;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        font-size: 13px;
+    }
+
+    &__email {
+        color: var(--color-subtext);
+    }
+
+    &__settings-btn {
+        margin-left: 30px;
+    }
+}

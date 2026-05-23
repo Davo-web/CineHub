@@ -1,3 +1,5 @@
+@use '../../mixins' as *;
+
 .collections__title {
     position: relative;
     left: 10px;
@@ -15,16 +17,17 @@
 
 .collections__item {
     padding: 5px 10px;
+
+    &.active {
+        background-color: var(--color-bg-active);
+        border-radius: 10px;
+
+        & .collections__link  {
+            color: var(--color-element-active);
+        }
+    }
 }
 
-.collections__item.active {
-    background-color: var(--color-bg-active);
-    border-radius: 10px;
-}
-
-.collections__item.active .collections__link  {
-    color: var(--color-element-active);
-}
 
 .collections__link {
     font-size: 14px;
@@ -32,29 +35,27 @@
     display: flex;
     align-items: center;
     gap: 12px;
-}
 
-.collections__link svg {
+    & svg {
     width: 25px;
     height: 25px;
 }
+}
 
 .collections__btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex-center;
     gap: 7px;
     color: var(--color-subtext);
     font-size: 12px;
     padding: 5px 10px;
-}
 
-.collections__btn:hover {
-    border-radius: 10px;
-    background-color: rgb(109, 104, 104, .2);
-}
+    &:hover {
+        border-radius: 10px;
+        background-color: rgb(109 104 104 / 20%);
+    }
 
-.collections__btn svg {
-    width: 25px;
-    height: 25px;
+    & svg {
+        width: 25px;
+        height: 25px;
+    }
 }

@@ -6,15 +6,15 @@
 
 .sidebar__item {
     padding: 5px 10px;
-}
 
-.sidebar__item.active {
-    background-color: var(--color-bg-active);
-    border-radius: 10px;
-}
+    &.active {
+        background-color: var(--color-bg-active);
+        border-radius: 10px;
 
-.sidebar__item.active .sidebar__link  {
-    color: var(--color-element-active);
+        & .sidebar__link  {
+            color: var(--color-element-active);
+        }
+    }
 }
 
 .sidebar__link {
@@ -23,9 +23,9 @@
     display: flex;
     align-items: center;
     gap: 12px;
-}
 
-.sidebar__link svg {
-    width: 25px;
-    height: 25px;
+    & svg {
+        width: 25px;
+        height: 25px;
+    }
 }

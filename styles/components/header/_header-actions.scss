@@ -1,0 +1,15 @@
+@use '../../mixins' as *;
+
+.header-actions {
+    @include flex-center;
+    gap: 30px;
+
+    &__notifications {
+        @include flex-center;
+    }
+
+    &__settings {
+        @include flex-center;
+        gap: 8px;
+    }
+}
