@@ -1,0 +1,55 @@
+@use '../../mixins' as *;
+
+.film-selection {
+    display: flex;
+    flex-direction: column;
+    padding-right: 15px;
+    gap: 15px;
+    margin-bottom: 15px;
+
+    &__slider {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 10px;
+
+        &-cards {
+            display: flex;
+            gap: 20px;
+        }
+    }
+
+    &__btn {
+        background-color: var(--color-element-active);
+        border-radius: 100%;
+        @include flex-center;
+        padding: 8px;
+
+        & svg {
+            width: 20px;
+        }
+    }
+}
+
+
+.section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__title-box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+
+        & svg {
+            height: 15px;
+        }
+    }
+
+    &__btn-view-all {
+        font-size: 14px;
+        color: var(--color-element-active);
+    }
+}
