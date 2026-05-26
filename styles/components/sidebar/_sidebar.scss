@@ -1,7 +1,75 @@
 .sidebar {
-    position: relative;
+    position: sticky;
+    top: 0;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     padding: 20px 15px 0;
     background-color: var(--color-bg2);
+
+    &__logo {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        margin-bottom: 30px;
+
+        &-img {
+            width: 30px;
+            height: 30px;
+        }
+
+        &-text {
+            font-weight: 600;
+            font-size: 24px;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+    }
+
+    &__item {
+        padding: 5px 10px;
+
+        &.active {
+            background-color: var(--color-bg-active);
+            border-radius: 10px;
+
+            & .sidebar__link  {
+                color: var(--color-element-active);
+            }
+        }
+    }
+
+    &__link {
+        font-size: 14px;
+        color: var(--color-text);
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+        & svg {
+            width: 25px;
+            height: 25px;
+        }
+    }
+
+    &__theme-btn {
+        margin-top: 15px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        background-color: var(--color-bg3);
+        padding: 10px 20px;
+        border-radius: 10px;
+        width: 90%;
+        font-size: 14px;
+
+        & svg {
+            width: 25px;
+            height: 25px;
+        }
+    }
 }
