@@ -1,0 +1,14 @@
+.rating {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+
+    &__img {
+        width: 15px;
+        height: 15px;
+    }
+    &__value {
+        color: var(--color-text);
+    }
+}
