@@ -1,0 +1,33 @@
+.movie-card {
+    position: relative;
+    width: 110px;
+    text-align: center;
+    font-size: 12px;
+
+    &__img {
+        border-radius: 10px;
+    }
+
+    &__title {
+        margin-top: 5px;
+    }
+
+    & .rating {
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        background-color: var(--color-bg3);
+        border-radius: 10px;
+        padding: 5px 7px;
+        opacity: .9;
+
+        &__img {
+            width: 10px;
+            height: 10px;
+        }
+
+        &__value {
+            font-size: 9px;
+        }
+    }
+}
