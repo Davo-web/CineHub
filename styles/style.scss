@@ -15,6 +15,8 @@
 @use './components/main/film-selection';
 @use './components/main/movie-card';
 
+@use './components/widget-panel/widget-panel';
+
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap');
 
@@ -25,9 +27,8 @@ body {
 }
 
 .app-container {
-    // height: 100vh;
     display: grid;
-    grid-template-columns: 250px 1fr 350px;
+    grid-template-columns: 250px 1fr 400px;
     // grid-template-columns: 1fr 4fr 1.4fr;
     grid-template-rows: 70px 1fr;
     grid-template-areas: 

@@ -121,6 +121,8 @@ header {
   margin-top: 15px;
   display: flex;
   align-items: center;
+  justify-content: center;
+  align-self: center;
   gap: 10px;
   background-color: var(--color-bg3);
   padding: 10px 20px;
@@ -217,7 +219,7 @@ header {
   color: var(--color-subtext);
 }
 main {
-  padding: 0 40px;
+  padding: 0 30px;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -328,26 +330,15 @@ main {
   gap: 15px;
   margin-bottom: 15px;
 }
-.film-selection__slider {
+.film-selection__box {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 10px;
 }
-.film-selection__slider-cards {
+.film-selection__box-cards {
   display: flex;
   gap: 20px;
-}
-.film-selection__btn {
-  background-color: var(--color-element-active);
-  border-radius: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 8px;
-}
-.film-selection__btn svg {
-  width: 20px;
 }
 
 .section-header {
@@ -398,6 +389,75 @@ main {
   font-size: 9px;
 }
 
+.widget-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-right: 20px;
+}
+.widget-panel section {
+  border-radius: 15px;
+}
+.widget-panel__block-header {
+  margin-bottom: 20px;
+}
+.widget-panel__block {
+  padding: 20px;
+  background-color: var(--color-bg2);
+}
+.widget-panel__list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.widget-panel__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.widget-panel__item img {
+  width: 40px;
+  height: 50px;
+  border-radius: 10px;
+}
+.widget-panel__film-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.widget-panel__film-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3px;
+}
+.widget-panel__film-name {
+  font-size: 14px;
+}
+.widget-panel__film-date {
+  color: var(--color-subtext);
+  font-size: 12px;
+}
+
+.recently-viewed .widget-panel__list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.recently-viewed .widget-panel__item img {
+  width: 60px;
+  height: 90px;
+  border-radius: 10px;
+}
+.recently-viewed .widget-panel__film-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
 body {
   font-family: "Inter", sans-serif;
   background-color: var(--color-bg);
@@ -406,7 +466,7 @@ body {
 
 .app-container {
   display: grid;
-  grid-template-columns: 250px 1fr 350px;
+  grid-template-columns: 250px 1fr 400px;
   grid-template-rows: 70px 1fr;
   grid-template-areas: "sidebar header header" "sidebar main widget-panel";
 }
