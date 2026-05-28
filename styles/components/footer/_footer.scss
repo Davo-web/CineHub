@@ -1,0 +1,82 @@
+.footer {
+    padding: 50px 20px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &__navigation {
+        width: 85%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .logo {
+        margin-bottom: 10px;
+    }
+
+    &__brand-description {
+        color: var(--color-subtext);
+        font-size: 14px;
+        margin-bottom: 50px;
+    }
+
+    &__legal {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &__language {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        &-title {
+            display: flex;
+            gap: 5px;
+            align-items: center;
+            svg {
+                width: 25px;
+                color: var(--color-element-active);
+            }
+        }
+
+        select option {
+                color: #000;
+            }
+    }
+
+    &__title {
+        color: var(--color-element-active);
+        margin-bottom: 10px;
+        font-size: 18px;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    &__item {
+        font-size: 14px;
+    }
+
+    &__links {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 50px;
+        margin-top: 20px;
+        margin-bottom: 50px;
+
+        svg {
+            width: 40px;
+            transition: color .2s ease-in;
+            &:hover {
+                color: var(--color-element-active);
+            }
+        }
+    }
+}

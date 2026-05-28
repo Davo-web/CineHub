@@ -77,20 +77,6 @@ header {
   padding: 20px 15px 0;
   background-color: var(--color-bg2);
 }
-.sidebar__logo {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  margin-bottom: 30px;
-}
-.sidebar__logo-img {
-  width: 30px;
-  height: 30px;
-}
-.sidebar__logo-text {
-  font-weight: 600;
-  font-size: 24px;
-}
 .sidebar__list {
   display: flex;
   flex-direction: column;
@@ -218,6 +204,21 @@ header {
   font-size: 11px;
   color: var(--color-subtext);
 }
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 30px;
+}
+.logo-img {
+  width: 30px;
+  height: 30px;
+}
+.logo-text {
+  font-weight: 600;
+  font-size: 24px;
+}
+
 main {
   padding: 0 30px;
   display: flex;
@@ -456,6 +457,77 @@ main {
   align-items: center;
   justify-content: center;
   gap: 10px;
+}
+
+.footer {
+  padding: 50px 20px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.footer__navigation {
+  width: 85%;
+  display: flex;
+  justify-content: space-between;
+}
+.footer .logo {
+  margin-bottom: 10px;
+}
+.footer__brand-description {
+  color: var(--color-subtext);
+  font-size: 14px;
+  margin-bottom: 50px;
+}
+.footer__legal {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.footer__language {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.footer__language-title {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+.footer__language-title svg {
+  width: 25px;
+  color: var(--color-element-active);
+}
+.footer__language select option {
+  color: #000;
+}
+.footer__title {
+  color: var(--color-element-active);
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+.footer__list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.footer__item {
+  font-size: 14px;
+}
+.footer__links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+.footer__links svg {
+  width: 40px;
+  transition: color 0.2s ease-in;
+}
+.footer__links svg:hover {
+  color: var(--color-element-active);
 }
 
 body {

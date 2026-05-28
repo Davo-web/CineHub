@@ -7,6 +7,7 @@
 @use 'components/sidebar/sidebar';
 @use 'components/sidebar/sidebar__collections';
 @use 'components/sidebar/sidebar__profile';
+@use './components/sidebar/logo';
 
 @use './components/main/main';
 @use './components/main/rating';
@@ -16,6 +17,8 @@
 @use './components/main/movie-card';
 
 @use './components/widget-panel/widget-panel';
+
+@use './components/footer/footer';
 
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap');
