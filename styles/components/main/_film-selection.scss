@@ -37,6 +37,8 @@
 
     &__btn-view-all {
         font-size: 14px;
-        color: var(--color-element-active);
+        &, &:link, &:visited {
+            color: var(--color-element-active);
+        }
     }
 }

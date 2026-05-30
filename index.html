@@ -13,8 +13,11 @@
         <header>
         <form class="search">
             <svg class="search__icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 1024 1024"><path fill="currentColor" d="M1014.64 969.04L703.71 656.207c57.952-69.408 92.88-158.704 92.88-256.208c0-220.912-179.088-400-400-400s-400 179.088-400 400s179.088 400 400 400c100.368 0 192.048-37.056 262.288-98.144l310.496 312.448c12.496 12.497 32.769 12.497 45.265 0c12.48-12.496 12.48-32.752 0-45.263zM396.59 736.527c-185.856 0-336.528-150.672-336.528-336.528S210.734 63.471 396.59 63.471s336.528 150.672 336.528 336.528S582.446 736.527 396.59 736.527"/></svg>
-            <input class="search__input" type="search" placeholder="Search for movies, TV shows...">
-            <button class="search__btn" type="submit" aria-label="Поиск">
+            <label for="search" class="visually-hidden">
+                Search movies
+            </label>
+            <input class="search__input" id="search" type="search" placeholder="Search for movies, TV shows...">
+            <button class="search__btn" type="submit">
                 <svg class="search__btn-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 1024 1024"><path fill="currentColor" d="M512 0C229.232 0 0 229.232 0 512c0 282.784 229.232 512 512 512c282.784 0 512-229.216 512-512C1024 229.232 794.784 0 512 0m0 961.008c-247.024 0-448-201.984-448-449.01c0-247.024 200.976-448 448-448s448 200.977 448 448s-200.976 449.01-448 449.01m20.368-642.368c-12.496 12.496-12.496 32.752 0 45.248l115.76 115.76H287.68c-17.68 0-32 14.336-32 32s14.32 32 32 32h362.464l-117.76 117.744c-12.496 12.496-12.496 32.752 0 45.248c6.256 6.256 14.432 9.376 22.624 9.376s16.368-3.12 22.624-9.376l189.008-194l-189.008-194c-12.512-12.496-32.752-12.496-45.264 0"/></svg>
             </button>
         </form>
@@ -173,92 +176,80 @@
                     </div>
                 </div>
                 <div class="hero__pagination">
-                    <span class="hero__dot hero__dot--active"></span>
-                    <span class="hero__dot"></span>
-                    <span class="hero__dot"></span>
-                    <span class="hero__dot"></span>
-                    <span class="hero__dot"></span>
+                    <button class="hero__dot hero__dot--active" aria-label="Go to slide 1"></button>
+                    <button class="hero__dot" aria-label="Go to slide 2"></button>
+                    <button class="hero__dot" aria-label="Go to slide 3"></button>
+                    <button class="hero__dot" aria-label="Go to slide 4"></button>
+                    <button class="hero__dot" aria-label="Go to slide 5"></button>
                 </div>
             </div>
 
             <section class="film-selection">
                 <div class="film-selection__section-header section-header">
-                    <button class="section-header__title-box">
+                    <a href="#" class="section-header__title-box">
                         <h3 class="section-header__title">Trending Now</h3>
                         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m8 20l8-8l-8-8"/></svg>
-                    </button>
+                    </a>
                     
-                    <button class="section-header__btn-view-all">View all</button>
+                    <a href="#" class="section-header__btn-view-all">View all</a>
                 </div>
 
                 <div class="film-selection__box">
                     <div class="film-selection__box-cards">
-                        <a href="#">
-                            <div class="movie-card">
-                                <img src="./img/godzilla_kond.png" alt="godzilla-and-kong" class="movie-card__img">
-                                <h4 class="movie-card__title">Godzilla x Kong: The New Empire</h4>
-                                <div class="rating">
-                                    <svg class="rating__img" xmlns="http://www.w3.org/2000/svg" width="32" height="32" color="yellow" viewBox="0 0 24 24"><path fill="currentColor" d="m12.001.63l2.903 8.35l8.839.181l-7.045 5.341l2.56 8.462L12 17.914l-7.256 5.05l2.56-8.462L.26 9.161l8.839-.18z"/></svg>
-                                    <span class="rating__value">7.1</span>
-                                </div>
+                        <a href="#" class="movie-card">
+                            <img src="./img/godzilla_kond.png" alt="godzilla-and-kong" class="movie-card__img">
+                            <h4 class="movie-card__title">Godzilla x Kong: The New Empire</h4>
+                            <div class="rating">
+                                <svg class="rating__img" xmlns="http://www.w3.org/2000/svg" width="32" height="32" color="yellow" viewBox="0 0 24 24"><path fill="currentColor" d="m12.001.63l2.903 8.35l8.839.181l-7.045 5.341l2.56 8.462L12 17.914l-7.256 5.05l2.56-8.462L.26 9.161l8.839-.18z"/></svg>
+                                <span class="rating__value">7.1</span>
                             </div>
                         </a>
 
-                        <a href="#">
-                            <div class="movie-card">
-                                <img src="./img/dune-part-two.png" alt="" class="movie-card__img">
-                                <h4 class="movie-card__title">Dune: Part Two</h4>
-                                <div class="rating">
-                                    <svg class="rating__img" xmlns="http://www.w3.org/2000/svg" width="32" height="32" color="yellow" viewBox="0 0 24 24"><path fill="currentColor" d="m12.001.63l2.903 8.35l8.839.181l-7.045 5.341l2.56 8.462L12 17.914l-7.256 5.05l2.56-8.462L.26 9.161l8.839-.18z"/></svg>
-                                    <span class="rating__value">7.1</span>
-                                </div>
+                        <a href="#" class="movie-card">
+                            <img src="./img/dune-part-two.png" alt="" class="movie-card__img">
+                            <h4 class="movie-card__title">Dune: Part Two</h4>
+                            <div class="rating">
+                                <svg class="rating__img" xmlns="http://www.w3.org/2000/svg" width="32" height="32" color="yellow" viewBox="0 0 24 24"><path fill="currentColor" d="m12.001.63l2.903 8.35l8.839.181l-7.045 5.341l2.56 8.462L12 17.914l-7.256 5.05l2.56-8.462L.26 9.161l8.839-.18z"/></svg>
+                                <span class="rating__value">7.1</span>
                             </div>
                         </a>
 
-                        <a href="#">
-                            <div class="movie-card">
-                                <img src="./img/oppenheimer.png" alt="" class="movie-card__img">
-                                <h4 class="movie-card__title">Oppenheimer</h4>
-                                <div class="rating">
-                                    <svg class="rating__img" xmlns="http://www.w3.org/2000/svg" width="32" height="32" color="yellow" viewBox="0 0 24 24"><path fill="currentColor" d="m12.001.63l2.903 8.35l8.839.181l-7.045 5.341l2.56 8.462L12 17.914l-7.256 5.05l2.56-8.462L.26 9.161l8.839-.18z"/></svg>
-                                    <span class="rating__value">7.1</span>
-                                </div>
+                        <a href="#" class="movie-card">
+                            <img src="./img/oppenheimer.png" alt="" class="movie-card__img">
+                            <h4 class="movie-card__title">Oppenheimer</h4>
+                            <div class="rating">
+                                <svg class="rating__img" xmlns="http://www.w3.org/2000/svg" width="32" height="32" color="yellow" viewBox="0 0 24 24"><path fill="currentColor" d="m12.001.63l2.903 8.35l8.839.181l-7.045 5.341l2.56 8.462L12 17.914l-7.256 5.05l2.56-8.462L.26 9.161l8.839-.18z"/></svg>
+                                <span class="rating__value">7.1</span>
                             </div>
                         </a>
 
-                        <a href="#">
-                            <div class="movie-card">
-                                <img src="./img/kfp4.png" alt="godzilla-and-kong" class="movie-card__img">
-                                <h4 class="movie-card__title">Kung Fu Panda 4</h4>
-                                <div class="rating">
-                                    <svg class="rating__img" xmlns="http://www.w3.org/2000/svg" width="32" height="32" color="yellow" viewBox="0 0 24 24"><path fill="currentColor" d="m12.001.63l2.903 8.35l8.839.181l-7.045 5.341l2.56 8.462L12 17.914l-7.256 5.05l2.56-8.462L.26 9.161l8.839-.18z"/></svg>
-                                    <span class="rating__value">7.1</span>
-                                </div>
+                        <a href="#" class="movie-card">
+                            <img src="./img/kfp4.png" alt="godzilla-and-kong" class="movie-card__img">
+                            <h4 class="movie-card__title">Kung Fu Panda 4</h4>
+                            <div class="rating">
+                                <svg class="rating__img" xmlns="http://www.w3.org/2000/svg" width="32" height="32" color="yellow" viewBox="0 0 24 24"><path fill="currentColor" d="m12.001.63l2.903 8.35l8.839.181l-7.045 5.341l2.56 8.462L12 17.914l-7.256 5.05l2.56-8.462L.26 9.161l8.839-.18z"/></svg>
+                                <span class="rating__value">7.1</span>
                             </div>
                         </a>
 
-                        <a href="#">
-                            <div class="movie-card">
-                                <img src="./img/batman.png" alt="godzilla-and-kong" class="movie-card__img">
-                                <h4 class="movie-card__title">The Batman (2022)</h4>
-                                <div class="rating">
-                                    <svg class="rating__img" xmlns="http://www.w3.org/2000/svg" width="32" height="32" color="yellow" viewBox="0 0 24 24"><path fill="currentColor" d="m12.001.63l2.903 8.35l8.839.181l-7.045 5.341l2.56 8.462L12 17.914l-7.256 5.05l2.56-8.462L.26 9.161l8.839-.18z"/></svg>
-                                    <span class="rating__value">7.1</span>
-                                </div>
+                        <a href="#" class="movie-card">
+                            <img src="./img/batman.png" alt="godzilla-and-kong" class="movie-card__img">
+                            <h4 class="movie-card__title">The Batman (2022)</h4>
+                            <div class="rating">
+                                <svg class="rating__img" xmlns="http://www.w3.org/2000/svg" width="32" height="32" color="yellow" viewBox="0 0 24 24"><path fill="currentColor" d="m12.001.63l2.903 8.35l8.839.181l-7.045 5.341l2.56 8.462L12 17.914l-7.256 5.05l2.56-8.462L.26 9.161l8.839-.18z"/></svg>
+                                <span class="rating__value">7.1</span>
                             </div>
                         </a>
 
-                        <a href="#">
-                            <div class="movie-card">
-                                <img src="./img/poorthings.png" alt="godzilla-and-kong" class="movie-card__img">
-                                <h4 class="movie-card__title">Poor Things</h4>
-                                <div class="rating">
-                                    <svg class="rating__img" xmlns="http://www.w3.org/2000/svg" width="32" height="32" color="yellow" viewBox="0 0 24 24"><path fill="currentColor" d="m12.001.63l2.903 8.35l8.839.181l-7.045 5.341l2.56 8.462L12 17.914l-7.256 5.05l2.56-8.462L.26 9.161l8.839-.18z"/></svg>
-                                    <span class="rating__value">7.1</span>
-                                </div>
+                        <a href="#" class="movie-card">
+                            <img src="./img/poorthings.png" alt="godzilla-and-kong" class="movie-card__img">
+                            <h4 class="movie-card__title">Poor Things</h4>
+                            <div class="rating">
+                                <svg class="rating__img" xmlns="http://www.w3.org/2000/svg" width="32" height="32" color="yellow" viewBox="0 0 24 24"><path fill="currentColor" d="m12.001.63l2.903 8.35l8.839.181l-7.045 5.341l2.56 8.462L12 17.914l-7.256 5.05l2.56-8.462L.26 9.161l8.839-.18z"/></svg>
+                                <span class="rating__value">7.1</span>
                             </div>
                         </a>
-                    </div>
+
                 </div>
             </section>
 
@@ -269,77 +260,64 @@
                         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m8 20l8-8l-8-8"/></svg>
                     </button>
                     
-                    <button class="section-header__btn-view-all">View all</button>
+                    <a href="#" class="section-header__btn-view-all">View all</a>
                 </div>
 
                 <div class="film-selection__box">
                     <div class="film-selection__box-cards">
-                        <a href="#">
-                            <div class="movie-card">
-                                <img src="./img/insout2.png" alt="godzilla-and-kong" class="movie-card__img">
-                                <h4 class="movie-card__title">Inside Out 2</h4>
-                                <div class="rating">
-                                    <svg class="rating__img" xmlns="http://www.w3.org/2000/svg" width="32" height="32" color="yellow" viewBox="0 0 24 24"><path fill="currentColor" d="m12.001.63l2.903 8.35l8.839.181l-7.045 5.341l2.56 8.462L12 17.914l-7.256 5.05l2.56-8.462L.26 9.161l8.839-.18z"/></svg>
-                                    <span class="rating__value">7.1</span>
-                                </div>
+                        <a href="#" class="movie-card">
+                            <img src="./img/insout2.png" alt="godzilla-and-kong" class="movie-card__img">
+                            <h4 class="movie-card__title">Inside Out 2</h4>
+                            <div class="rating">
+                                <svg class="rating__img" xmlns="http://www.w3.org/2000/svg" width="32" height="32" color="yellow" viewBox="0 0 24 24"><path fill="currentColor" d="m12.001.63l2.903 8.35l8.839.181l-7.045 5.341l2.56 8.462L12 17.914l-7.256 5.05l2.56-8.462L.26 9.161l8.839-.18z"/></svg>
+                                <span class="rating__value">7.1</span>
                             </div>
                         </a>
 
-                        <a href="#">
-                            <div class="movie-card">
-                                <img src="./img/deadpool.png" alt="godzilla-and-kong" class="movie-card__img">
-                                <h4 class="movie-card__title">Deadpool & Wolverine</h4>
-                                <div class="rating">
-                                    <svg class="rating__img" xmlns="http://www.w3.org/2000/svg" width="32" height="32" color="yellow" viewBox="0 0 24 24"><path fill="currentColor" d="m12.001.63l2.903 8.35l8.839.181l-7.045 5.341l2.56 8.462L12 17.914l-7.256 5.05l2.56-8.462L.26 9.161l8.839-.18z"/></svg>
-                                    <span class="rating__value">7.1</span>
-                                </div>
+                        <a href="#" class="movie-card">
+                            <img src="./img/deadpool.png" alt="godzilla-and-kong" class="movie-card__img">
+                            <h4 class="movie-card__title">Deadpool & Wolverine</h4>
+                            <div class="rating">
+                                <svg class="rating__img" xmlns="http://www.w3.org/2000/svg" width="32" height="32" color="yellow" viewBox="0 0 24 24"><path fill="currentColor" d="m12.001.63l2.903 8.35l8.839.181l-7.045 5.341l2.56 8.462L12 17.914l-7.256 5.05l2.56-8.462L.26 9.161l8.839-.18z"/></svg>
+                                <span class="rating__value">7.1</span>
                             </div>
                         </a>
 
-                        <a href="#">
-                            <div class="movie-card">
-                                <img src="./img/fallguy.png" alt="godzilla-and-kong" class="movie-card__img">
-                                <h4 class="movie-card__title"> The Fall Guy</h4>
-                                <div class="rating">
-                                    <svg class="rating__img" xmlns="http://www.w3.org/2000/svg" width="32" height="32" color="yellow" viewBox="0 0 24 24"><path fill="currentColor" d="m12.001.63l2.903 8.35l8.839.181l-7.045 5.341l2.56 8.462L12 17.914l-7.256 5.05l2.56-8.462L.26 9.161l8.839-.18z"/></svg>
-                                    <span class="rating__value">7.1</span>
-                                </div>
+                        <a href="#" class="movie-card">
+                            <img src="./img/fallguy.png" alt="godzilla-and-kong" class="movie-card__img">
+                            <h4 class="movie-card__title"> The Fall Guy</h4>
+                            <div class="rating">
+                                <svg class="rating__img" xmlns="http://www.w3.org/2000/svg" width="32" height="32" color="yellow" viewBox="0 0 24 24"><path fill="currentColor" d="m12.001.63l2.903 8.35l8.839.181l-7.045 5.341l2.56 8.462L12 17.914l-7.256 5.05l2.56-8.462L.26 9.161l8.839-.18z"/></svg>
+                                <span class="rating__value">7.1</span>
                             </div>
                         </a>
 
-                        <a href="#">
-                            <div class="movie-card">
-                                <img src="./img/kingdomofpjfapes.png" alt="godzilla-and-kong" class="movie-card__img">
-                                <h4 class="movie-card__title">Kingdom of the planet of the apes</h4>
-                                <div class="rating">
-                                    <svg class="rating__img" xmlns="http://www.w3.org/2000/svg" width="32" height="32" color="yellow" viewBox="0 0 24 24"><path fill="currentColor" d="m12.001.63l2.903 8.35l8.839.181l-7.045 5.341l2.56 8.462L12 17.914l-7.256 5.05l2.56-8.462L.26 9.161l8.839-.18z"/></svg>
-                                    <span class="rating__value">7.1</span>
-                                </div>
+                        <a href="#" class="movie-card">
+                            <img src="./img/kingdomofpjfapes.png" alt="godzilla-and-kong" class="movie-card__img">
+                            <h4 class="movie-card__title">Kingdom of the planet of the apes</h4>
+                            <div class="rating">
+                                <svg class="rating__img" xmlns="http://www.w3.org/2000/svg" width="32" height="32" color="yellow" viewBox="0 0 24 24"><path fill="currentColor" d="m12.001.63l2.903 8.35l8.839.181l-7.045 5.341l2.56 8.462L12 17.914l-7.256 5.05l2.56-8.462L.26 9.161l8.839-.18z"/></svg>
+                                <span class="rating__value">7.1</span>
                             </div>
                         </a>
 
-                        <a href="#">
-                            <div class="movie-card">
-                                <img src="./img/twisters.png" alt="godzilla-and-kong" class="movie-card__img">
-                                <h4 class="movie-card__title">Twisters</h4>
-                                <div class="rating">
-                                    <svg class="rating__img" xmlns="http://www.w3.org/2000/svg" width="32" height="32" color="yellow" viewBox="0 0 24 24"><path fill="currentColor" d="m12.001.63l2.903 8.35l8.839.181l-7.045 5.341l2.56 8.462L12 17.914l-7.256 5.05l2.56-8.462L.26 9.161l8.839-.18z"/></svg>
-                                    <span class="rating__value">7.1</span>
-                                </div>
+                        <a href="#" class="movie-card">
+                            <img src="./img/twisters.png" alt="godzilla-and-kong" class="movie-card__img">
+                            <h4 class="movie-card__title">Twisters</h4>
+                            <div class="rating">
+                                <svg class="rating__img" xmlns="http://www.w3.org/2000/svg" width="32" height="32" color="yellow" viewBox="0 0 24 24"><path fill="currentColor" d="m12.001.63l2.903 8.35l8.839.181l-7.045 5.341l2.56 8.462L12 17.914l-7.256 5.05l2.56-8.462L.26 9.161l8.839-.18z"/></svg>
+                                <span class="rating__value">7.1</span>
                             </div>
                         </a>
 
-                        <a href="#">
-                            <div class="movie-card">
-                                <img src="./img/alien.png" alt="godzilla-and-kong" class="movie-card__img">
-                                <h4 class="movie-card__title">Alien: Romulus</h4>
-                                <div class="rating">
-                                    <svg class="rating__img" xmlns="http://www.w3.org/2000/svg" width="32" height="32" color="yellow" viewBox="0 0 24 24"><path fill="currentColor" d="m12.001.63l2.903 8.35l8.839.181l-7.045 5.341l2.56 8.462L12 17.914l-7.256 5.05l2.56-8.462L.26 9.161l8.839-.18z"/></svg>
-                                    <span class="rating__value">7.1</span>
-                                </div>
+                        <a href="#" class="movie-card">
+                            <img src="./img/alien.png" alt="godzilla-and-kong" class="movie-card__img">
+                            <h4 class="movie-card__title">Alien: Romulus</h4>
+                            <div class="rating">
+                                <svg class="rating__img" xmlns="http://www.w3.org/2000/svg" width="32" height="32" color="yellow" viewBox="0 0 24 24"><path fill="currentColor" d="m12.001.63l2.903 8.35l8.839.181l-7.045 5.341l2.56 8.462L12 17.914l-7.256 5.05l2.56-8.462L.26 9.161l8.839-.18z"/></svg>
+                                <span class="rating__value">7.1</span>
                             </div>
                         </a>
-                        
                     </div>
                 </div>
             </section>
@@ -349,7 +327,7 @@
             <section class="widget-panel__block watchlist">
                 <div class="widget-panel__block-header section-header">
                     <h3 class="section-header__title">My Watchlist</h3>
-                    <button class="section-header__btn-view-all">View all</button>
+                    <a href="#" class="section-header__btn-view-all">View all</a>
                 </div>
 
                 <ul class="widget-panel__list">
@@ -363,7 +341,7 @@
                                 </div>
                             </div>
                         </a>
-                        <button class="widget-panel__item-btn">
+                        <button class="widget-panel__item-btn" aria-label="remove from watchlist">
                             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="M18 2H6c-1.103 0-2 .897-2 2v18l8-4.572L20 22V4c0-1.103-.897-2-2-2m0 16.553l-6-3.428l-6 3.428V4h12z"/></svg>
                         </button>
                     </li>
@@ -378,7 +356,7 @@
                                 </div>
                             </div>
                         </a>
-                        <button class="widget-panel__item-btn">
+                        <button class="widget-panel__item-btn" aria-label="remove from watchlist">
                             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="M18 2H6c-1.103 0-2 .897-2 2v18l8-4.572L20 22V4c0-1.103-.897-2-2-2m0 16.553l-6-3.428l-6 3.428V4h12z"/></svg>
                         </button>
                     </li>
@@ -393,7 +371,7 @@
                                 </div>
                             </div>
                         </a>
-                        <button class="widget-panel__item-btn">
+                        <button class="widget-panel__item-btn" aria-label="remove from watchlist">
                             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="M18 2H6c-1.103 0-2 .897-2 2v18l8-4.572L20 22V4c0-1.103-.897-2-2-2m0 16.553l-6-3.428l-6 3.428V4h12z"/></svg>
                         </button>
                     </li>
@@ -404,75 +382,61 @@
             <section class="widget-panel__block recently-viewed">
                 <div class="widget-panel__block-header section-header">
                     <h3 class="section-header__title">Recently Viewed</h3>
-                    <button class="section-header__btn-view-all">View all</button>
+                    <a href="#" class="section-header__btn-view-all">View all</a>
                 </div>
 
                 <ul class="widget-panel__list">
                     <li class="widget-panel__item">
-                        <a href="#">
-                            <button class="recently-viewed__btn">
-                                <img src="./img/civilwar.png" alt="interstellar">
-                            </button>
+                        <a href="#" class="recently-viewed__link">
+                            <img src="./img/civilwar.png" alt="interstellar">
                         </a>
                     </li>
 
                     <li class="widget-panel__item">
-                        <a href="#">
-                            <button class="recently-viewed__btn">
-                                <img src="./img/kfp4.png" alt="The Shawshank Redemption">
-                            </button>
+                        <a href="#" class="recently-viewed__link">
+                            <img src="./img/kfp4.png" alt="The Shawshank Redemption">
                         </a>
                     </li>
 
                     <li class="widget-panel__item">
-                        <a href="#">
-                            <button class="recently-viewed__btn">
-                                <img src="./img/poorthings.png" alt="inception">
-                            </button>
+                        <a href="#" class="recently-viewed__link">
+                            <img src="./img/poorthings.png" alt="inception">
                         </a>
                     </li>
 
                     <li class="widget-panel__item">
-                        <a href="#">
-                            <button class="recently-viewed__btn">
-                                <img src="./img/insout2.png" alt="inception">
-                            </button>
+                        <a href="#" class="recently-viewed__link">
+                            <img src="./img/insout2.png" alt="inception">
                         </a>
                     </li>
 
                     <li class="widget-panel__item">
-                        <a href="#">
-                            <button class="recently-viewed__btn">
-                                <img src="./img/kingdomofpjfapes.png" alt="inception">
-                            </button>
+                        <a href="#" class="recently-viewed__link">
+                            <img src="./img/kingdomofpjfapes.png" alt="inception">
                         </a>
                     </li>
 
                     <li class="widget-panel__item">
-                        <a href="#">
-                            <button class="recently-viewed__btn">
-                                <img src="./img/fallguy.png" alt="inception">
-                            </button>
+                        <a href="#" class="recently-viewed__link">
+                            <img src="./img/fallguy.png" alt="inception">
                         </a>
                     </li>
 
                     <li class="widget-panel__item">
-                        <a href="#">
-                            <button class="recently-viewed__btn">
-                                <img src="./img/batman.png" alt="inception">
-                            </button>
+                        <a href="#" class="recently-viewed__link">
+                            <img src="./img/batman.png" alt="inception">
                         </a>
                     </li>
 
                 </ul>
+
             </section>
 
-            <section class="widget-panel__block watchlist">
+            <section class="widget-panel__block recommendations">
                 <div class="widget-panel__block-header section-header">
                     <h3 class="section-header__title">Recommendations</h3>
-                    <button class="section-header__btn-view-all">View all</button>
+                    <a href="#" class="section-header__btn-view-all">View all</a>
                 </div>
-                <p></p>
                 <ul class="widget-panel__list">
                     <li class="widget-panel__item">
                         <a href="#">
@@ -484,7 +448,7 @@
                                 </div>
                             </div>
                         </a>
-                        <button class="widget-panel__item-btn">
+                        <button class="widget-panel__item-btn" aria-label="add to watchlist">
                             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="M18 2H6c-1.103 0-2 .897-2 2v18l8-4.572L20 22V4c0-1.103-.897-2-2-2m0 16.553l-6-3.428l-6 3.428V4h12z"/></svg>
                         </button>
                     </li>
@@ -499,7 +463,7 @@
                                 </div>
                             </div>
                         </a>
-                        <button class="widget-panel__item-btn">
+                        <button class="widget-panel__item-btn" aria-label="add to watchlist">
                             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="M18 2H6c-1.103 0-2 .897-2 2v18l8-4.572L20 22V4c0-1.103-.897-2-2-2m0 16.553l-6-3.428l-6 3.428V4h12z"/></svg>
                         </button>
                     </li>
@@ -514,7 +478,7 @@
                                 </div>
                             </div>
                         </a>
-                        <button class="widget-panel__item-btn">
+                        <button class="widget-panel__item-btn" aria-label="add to watchlist">
                             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="M18 2H6c-1.103 0-2 .897-2 2v18l8-4.572L20 22V4c0-1.103-.897-2-2-2m0 16.553l-6-3.428l-6 3.428V4h12z"/></svg>
                         </button>
                     </li>
@@ -530,36 +494,36 @@
                 <div class="footer__brand-logo">
                     <div class="logo">
                         <img class="logo-img" src="./img/cinehub-logo.svg" alt="logo">
-                        <h1 class="logo-text">CineHub</h1>
+                        <h2 class="logo-text">CineHub</h2>
                     </div>
                     <div class="footer__brand-description">Your Ultimate Cinematic Experience.</div>
                 </div>
                 <p class="footer__title">Contact</p>
                 <ul class="footer__list">
-                    <li class="footer__item">Help Center</li>
-                    <li class="footer__item">Email Us</li>
-                    <li class="footer__item">Report a Bug</li>
+                    <li class="footer__item"><a href="#" class="footer__link-item">Help Center</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link-item">Email Us</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link-item">Report a Bug</a></li>
                 </ul>
             </div>
 
             <div class="footer__company">
                 <p class="footer__title">Company</p>
                 <ul class="footer__list">
-                    <li class="footer__item">About Us</li>
-                    <li class="footer__item">Careers</li>
-                    <li class="footer__item">Press</li>
-                    <li class="footer__item">Blog</li>
+                    <li class="footer__item"><a href="#" class="footer__link-item">About Us</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link-item">Careers</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link-item">Press</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link-item">Blog</a></li>
                 </ul>
             </div>
 
             <div class="footer__discover">
                 <p class="footer__title">Discover</p>
                 <ul class="footer__list">
-                    <li class="footer__item">Latest Movies</li>
-                    <li class="footer__item">TV Shows</li>
-                    <li class="footer__item">Collections</li>
-                    <li class="footer__item">Genre Maps</li>
-                    <li class="footer__item">CineWiki</li>
+                    <li class="footer__item"><a href="#" class="footer__link-item">Latest Movies</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link-item">TV Shows</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link-item">Collections</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link-item">Genre Maps</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link-item">CineWiki</a></li>
                 </ul>
             </div>
 
@@ -567,10 +531,10 @@
                 <div class="footer__list-box">
                     <p class="footer__title">Legal</p>
                     <ul class="footer__list">
-                        <li class="footer__item">Term of Service</li>
-                        <li class="footer__item">Privacy Policy</li>
-                        <li class="footer__item">DMCA & Trademark</li>
-                        <li class="footer__item">Cookies</li>
+                        <li class="footer__item"><a href="#" class="footer__link-item">Term of Service</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link-item">Privacy Policy</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link-item">DMCA & Trademark</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link-item">Cookies</a></li>
                     </ul>
                 </div>
                 <div class="footer__language">
@@ -586,9 +550,16 @@
             </div>
         </div>
         <div class="footer__links">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1.5 17q-1-5.5 0-10Q1.9 4.8 4 4.5q8-1 16 0q2.1.3 2.5 2.5q1 4.5 0 10q-.4 2.2-2.5 2.5q-8 1-16 0q-2.1-.3-2.5-2.5m8-8.5v7l6-3.5Z"/></svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><circle cx="12" cy="12" r="4"/><rect width="20" height="20" x="2" y="2" rx="5"/></g></svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m3 21l7.5-7.5m3-3L21 3M8 3H3l13 18h5Z"/></svg>
+            <a href="#" class="footer__link" aria-label="YouTube">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1.5 17q-1-5.5 0-10Q1.9 4.8 4 4.5q8-1 16 0q2.1.3 2.5 2.5q1 4.5 0 10q-.4 2.2-2.5 2.5q-8 1-16 0q-2.1-.3-2.5-2.5m8-8.5v7l6-3.5Z"/></svg>
+            </a>
+            <a href="#" class="footer__link" aria-label="Instagram">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><circle cx="12" cy="12" r="4"/><rect width="20" height="20" x="2" y="2" rx="5"/></g></svg>
+            </a>
+            <a href="#" class="footer__link" aria-label="X">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m3 21l7.5-7.5m3-3L21 3M8 3H3l13 18h5Z"/></svg>
+            </a>
+
         </div>
         <div class="divider"></div>
         <div class="footer-legal-info">© 2026 CineHub, Inc. All rights reserved.</div>

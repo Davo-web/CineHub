@@ -50,6 +50,15 @@ header {
   justify-content: center;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
 .header-actions {
   display: flex;
   align-items: center;
@@ -313,7 +322,6 @@ main {
   gap: 10px;
 }
 .hero__dot {
-  cursor: pointer;
   width: 12px;
   height: 6px;
   background-color: #fff;
@@ -358,6 +366,8 @@ main {
 }
 .section-header__btn-view-all {
   font-size: 14px;
+}
+.section-header__btn-view-all, .section-header__btn-view-all:link, .section-header__btn-view-all:visited {
   color: var(--color-element-active);
 }
 
@@ -564,6 +574,6 @@ main {
   margin: 15px auto;
   width: 80%;
   height: 1px;
-  opacity: 10%;
+  opacity: 0.1;
   background-color: #fff;
 }/*# sourceMappingURL=style.css.map */
