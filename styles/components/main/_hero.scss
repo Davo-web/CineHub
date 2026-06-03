@@ -1,11 +1,15 @@
 @use '../../mixins' as *;
+@use '../../variables' as *;
 
 .hero {
     position: relative;
     &__slide {
         width: 100%;
-        background-image: linear-gradient(to right, #0b0f19 0%, transparent 80%, #0b0f19 35%, transparent 65%),
-                        url('../img/slide__duna-bg.png');
+        background-image: linear-gradient(to right, 
+                    #0b0f19 0%, 
+                    transparent 80%),
+                    url('../img/slide__duna-bg.png');
+
         background-position: center center;
         background-size: cover;
         background-repeat: no-repeat;
@@ -15,18 +19,18 @@
         gap: 10px;
         padding: 40px 30px 25px;
         color: var(--color-subtext);
-        border-radius: 10px;
+        border-radius: $radius-md;
     }
 
     &__badge {
-        font-size: 12px;
+        font-size: $font-sm;
         text-transform: uppercase;
-        color: #4242A8;
+        color: var(--color-element-active);
     }
 
     &__title {
         color: var(--color-text);
-        font-size: 32px;
+        font-size: $font-xl;
         font-weight: 600;
     }
 
@@ -34,17 +38,17 @@
         display: flex;
         align-items: center;
         gap: 18px;
-        font-size: 14px;
+        font-size: $font-base;
     }
 
     &__age-limit {
         padding: 6px;
         background-color: var(--color-bg2);
-        border-radius: 10px;
+        border-radius: $radius-md;
     }
 
     &__description {
-        font-size: 14px;
+        font-size: $font-base;
         width: 45%;
     }
 
@@ -58,9 +62,9 @@
         margin-top: 5px;
         @include flex-center;
         padding: 10px 15px;
-        border-radius: 10px;
+        border-radius: $radius-md;
         color: var(--color-text);
-        font-size: 14px;
+        font-size: $font-base;
         gap: 5px;
 
         &--play {
@@ -79,13 +83,18 @@
         display: flex;
         align-items: center;
         gap: 10px;
+
+        @include large-phone {
+            display: none;
+            overflow: hidden;
+        }
     }
 
     &__dot {
         width: 12px;
         height: 6px;
-        background-color: #fff;
-        border-radius: 10px;
+        background-color: var(--color-text);
+        border-radius: $radius-md;
 
         &--active {
             background-color: var(--color-element-active);

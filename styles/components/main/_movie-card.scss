@@ -1,11 +1,14 @@
+@use '../../variables' as *;
+
 .movie-card {
     position: relative;
     width: 110px;
     text-align: center;
-    font-size: 12px;
+    font-size: $font-sm;
 
     &__img {
-        border-radius: 10px;
+        border-radius: $radius-md;
+        height: 80%;
     }
 
     &__title {
@@ -17,7 +20,7 @@
         top: 5px;
         left: 5px;
         background-color: var(--color-bg3);
-        border-radius: 10px;
+        border-radius: $radius-md;
         padding: 5px 7px;
         opacity: .9;
 

@@ -1,16 +1,18 @@
+@use '../../variables' as *;
+
 .logo {
     display: flex;
     align-items: center;
     gap: 5px;
     margin-bottom: 30px;
 
-    &-img {
+    &__img {
         width: 30px;
         height: 30px;
     }
 
-    &-text {
+    &__text {
         font-weight: 600;
-        font-size: 24px;
+        font-size: $font-lg;
     }
 }

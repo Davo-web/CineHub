@@ -1,13 +1,19 @@
+@use '../../variables' as *;
+@use '../../mixins' as *;
+
 .footer {
     padding: 50px 20px 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
 
     &__navigation {
         width: 85%;
         display: flex;
+        flex-wrap: wrap;
+        gap: 100px;
         justify-content: space-between;
     }
 
@@ -17,7 +23,7 @@
 
     &__brand-description {
         color: var(--color-subtext);
-        font-size: 14px;
+        font-size: $font-base;
         margin-bottom: 50px;
     }
 
@@ -25,6 +31,14 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        @include small-desktop {
+            flex-direction: row;
+            width: 100%;
+        }
+
+        &-info {
+            text-align: center;
+        }
     }
 
     &__language {
@@ -43,14 +57,14 @@
         }
 
         select option {
-                color: #000;
+                color: var(--color-black);
             }
     }
 
     &__title {
         color: var(--color-element-active);
         margin-bottom: 10px;
-        font-size: 18px;
+        font-size: $font-md;
     }
 
     &__list {
@@ -60,7 +74,7 @@
     }
 
     &__item {
-        font-size: 14px;
+        font-size: $font-base;
     }
 
     &__links {

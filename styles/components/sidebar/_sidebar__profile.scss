@@ -1,14 +1,20 @@
 @use '../../mixins' as *;
+@use '../../variables' as *;
 
 .profile {
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    padding: 15px 5px;
+    width: calc(100% + 30px); // компенсируем padding: 15px с каждой стороны
+    margin-top: auto;
+    margin-left: -15px;
+    margin-right: -15px;
+    padding: 15px 20px;       // внутренний отступ уже внутри блока
     @include flex-center;
     gap: 10px;
     background-color: var(--color-bg3);
+
+    @include large-desktop {
+        padding: 15px 20px;
+        justify-content: space-between;
+    }
 
     &__avatar {
         width: 35px;
@@ -21,14 +27,25 @@
         flex-direction: column;
         gap: 5px;
         font-size: 13px;
+
+        @include large-desktop {
+            font-size: 15px;
+        }
     }
 
     &__email {
-        font-size: 11px;
+        font-size: $font-xs;
         color: var(--color-subtext);
+        word-break: break-all;
+
+        @include large-desktop {
+            display: none;
+        }
     }
 
     &__settings-btn {
-        // margin-left: 5px;
+        @include large-desktop {
+            flex-shrink: 0;
+        }
     }
 }

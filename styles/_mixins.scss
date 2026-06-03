@@ -1,5 +1,36 @@
-@mixin  flex-center ($align: center, $justify: center) {
+@use './variables' as *;
+@mixin flex-center ($align: center, $justify: center) {
     display: flex;
     align-items: $align;
     justify-content: $justify;
+}
+
+@mixin large-desktop {
+    @media (max-width: $bp-large-desktop) {
+        @content;
+    }
+}
+
+@mixin small-desktop {
+    @media (max-width: $bp-small-desktop) {
+        @content;
+    }
+}
+
+@mixin very-small-desktop {
+    @media (max-width: $bp-very-small-desktop) {
+        @content;
+    }
+}
+
+@mixin large-phone {
+    @media (max-width: $bp-large-phone) {
+        @content;
+    }
+}
+
+@mixin medium-phone {
+    @media (max-width: $bp-medium-phone) {
+        @content;
+    }
 }

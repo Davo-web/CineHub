@@ -1,16 +1,24 @@
 @use '../../mixins' as *;
+@use '../../variables' as *;
 
 .widget-panel {
     display: flex;
     flex-direction: column;
     gap: 10px;
     padding-right: 20px;
+
+    @include small-desktop {
+        display: none;
+        overflow: hidden;
+    }
+
     & section {
-        border-radius: 15px;
+        border-radius: $radius-lg;
     }
 
     &__block-header {
         margin-bottom: 20px;
+        gap: 20px;
     }
     &__block {
         padding: 20px;
@@ -27,11 +35,16 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        gap: 30px;
 
         & img {
             width: 40px;
-            height: 50px;
-            border-radius: 10px;
+            height: 55px;
+            border-radius: $radius-md;
+        }
+
+        &-btn {
+            flex-shrink: 0;
         }
     }
 
@@ -48,12 +61,12 @@
     }
 
     &__film-name {
-        font-size: 14px;
+        font-size: $font-base;
     }
 
     &__film-date {
         color: var(--color-subtext);
-        font-size: 12px;
+        font-size: $font-sm;
     }
 }
 
@@ -69,7 +82,11 @@
         &__item img {
             width: 60px;
             height: 90px;
-            border-radius: 10px;
+            border-radius: $radius-md;
+            @include large-desktop {
+                width: 45px;
+                height: 70px;
+            }
         }
 
         &__film-info {

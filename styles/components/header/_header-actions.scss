@@ -4,6 +4,10 @@
     @include flex-center;
     gap: 30px;
 
+    @include large-phone {
+        gap: 15px;
+    }
+
     &__notifications {
         @include flex-center;
     }
@@ -11,5 +15,12 @@
     &__settings {
         @include flex-center;
         gap: 8px;
+
+        &-arrow {
+            @include small-desktop {
+                display: none;
+                overflow: hidden;
+            }
+        }
     }
 }

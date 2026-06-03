@@ -5,5 +5,24 @@
     --color-bg2: #181C27;
     --color-bg-active: #232347;
     --color-element-active: #8370F0;
-    --color-bg3: #1D222D;;
+    --color-bg3: #1D222D;
+    --color-black: #000;
 }
+
+$radius-sm: 8px;
+$radius-md: 10px;
+$radius-lg: 15px;
+
+$font-xs:  11px;
+$font-sm:  12px;
+$font-base: 14px;
+$font-md:  18px;
+$font-lg:  24px;
+$font-xl:  32px;
+
+
+$bp-large-desktop: 1400px;
+$bp-small-desktop: 1150px;
+$bp-very-small-desktop: 850px;
+$bp-large-phone: 760px;
+$bp-medium-phone: 595px;
