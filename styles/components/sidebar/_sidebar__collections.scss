@@ -2,8 +2,7 @@
 @use '../../variables' as *;
 
 .collections__title {
-    position: relative;
-    left: 10px;
+    padding-left: 10px;
     color: var(--color-subtext);
     font-size: $font-sm;
     margin-bottom: 10px;
@@ -22,10 +21,11 @@
     &.active {
         background-color: var(--color-bg-active);
         border-radius: $radius-md;
+        color: var(--color-element-active);
+    }
 
-        & .collections__link  {
-            color: var(--color-element-active);
-        }
+    &:hover {
+        color: var(--color-element-active);
     }
 }
 

@@ -1,10 +1,16 @@
+@use '../../mixins' as *;
+
 .burger-menu {
     width: 35px;
     height: 22px;
-    display: flex;
+    display: none; // flex
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    
+    @include large-desktop {
+        display: flex;
+    }
     
     &__line {
         width: 100%;

@@ -10,23 +10,25 @@
 </head>
 <body>
     <div class="app-container">
-        <header>
-            <form class="search">
-                <button class="burger-menu">
+        <header class="header">
+            <div class="header-main">
+                <button class="burger-menu" type="button">
                     <div class="burger-menu__line"></div>
                     <div class="burger-menu__line"></div>
                     <div class="burger-menu__line"></div>
                 </button>
-                <svg class="search__icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 1024 1024"><path fill="currentColor" d="M1014.64 969.04L703.71 656.207c57.952-69.408 92.88-158.704 92.88-256.208c0-220.912-179.088-400-400-400s-400 179.088-400 400s179.088 400 400 400c100.368 0 192.048-37.056 262.288-98.144l310.496 312.448c12.496 12.497 32.769 12.497 45.265 0c12.48-12.496 12.48-32.752 0-45.263zM396.59 736.527c-185.856 0-336.528-150.672-336.528-336.528S210.734 63.471 396.59 63.471s336.528 150.672 336.528 336.528S582.446 736.527 396.59 736.527"/></svg>
-                <label for="search" class="visually-hidden">
-                    Search movies
-                </label>
-                <input class="search__input" id="search" type="search" placeholder="Search for movies, TV shows...">
-                <button class="search__btn" type="submit">
-                    <svg class="search__btn-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 1024 1024"><path fill="currentColor" d="M512 0C229.232 0 0 229.232 0 512c0 282.784 229.232 512 512 512c282.784 0 512-229.216 512-512C1024 229.232 794.784 0 512 0m0 961.008c-247.024 0-448-201.984-448-449.01c0-247.024 200.976-448 448-448s448 200.977 448 448s-200.976 449.01-448 449.01m20.368-642.368c-12.496 12.496-12.496 32.752 0 45.248l115.76 115.76H287.68c-17.68 0-32 14.336-32 32s14.32 32 32 32h362.464l-117.76 117.744c-12.496 12.496-12.496 32.752 0 45.248c6.256 6.256 14.432 9.376 22.624 9.376s16.368-3.12 22.624-9.376l189.008-194l-189.008-194c-12.512-12.496-32.752-12.496-45.264 0"/></svg>
-                </button>
-            </form>
-
+                <form class="search">
+                    <svg class="search__icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 1024 1024"><path fill="currentColor" d="M1014.64 969.04L703.71 656.207c57.952-69.408 92.88-158.704 92.88-256.208c0-220.912-179.088-400-400-400s-400 179.088-400 400s179.088 400 400 400c100.368 0 192.048-37.056 262.288-98.144l310.496 312.448c12.496 12.497 32.769 12.497 45.265 0c12.48-12.496 12.48-32.752 0-45.263zM396.59 736.527c-185.856 0-336.528-150.672-336.528-336.528S210.734 63.471 396.59 63.471s336.528 150.672 336.528 336.528S582.446 736.527 396.59 736.527"/></svg>
+                    <label for="search" class="visually-hidden">
+                        Search movies
+                    </label>
+                    <input class="search__input" id="search" type="search" placeholder="Search for movies, TV shows...">
+                    <button class="search__btn" type="submit">
+                        <svg class="search__btn-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 1024 1024"><path fill="currentColor" d="M512 0C229.232 0 0 229.232 0 512c0 282.784 229.232 512 512 512c282.784 0 512-229.216 512-512C1024 229.232 794.784 0 512 0m0 961.008c-247.024 0-448-201.984-448-449.01c0-247.024 200.976-448 448-448s448 200.977 448 448s-200.976 449.01-448 449.01m20.368-642.368c-12.496 12.496-12.496 32.752 0 45.248l115.76 115.76H287.68c-17.68 0-32 14.336-32 32s14.32 32 32 32h362.464l-117.76 117.744c-12.496 12.496-12.496 32.752 0 45.248c6.256 6.256 14.432 9.376 22.624 9.376s16.368-3.12 22.624-9.376l189.008-194l-189.008-194c-12.512-12.496-32.752-12.496-45.264 0"/></svg>
+                    </button>
+                </form>
+            </div>
+            
             <div class="header-actions">
                 <button class="header-actions__notifications" aria-label="Notifications">
                     <svg class="header-actions__notifications-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 1024 1024"><path fill="currentColor" d="M905.616 711.888c-37.344-45.424-88.48-109.742-88.48-175.358V327.57c0-180.016-134.64-326.479-306.688-326.479c-172.08 0-305.664 146.464-305.664 326.479v208.96c0 64.512-55.489 125.487-90.672 172.799c-31.649 42.512-56.624 76.096-39.76 109.664c14.832 29.536 51.968 33.328 82.655 33.328h183.36c.048 94.208 76.448 170.576 170.672 170.576c94.24 0 170.641-76.368 170.688-170.576h187.664c19.52 0 65.152 0 80.863-33.2c15.857-33.616-9.52-64.513-44.64-107.232zm-394.609 243.97c-57.216 0-103.632-46.352-103.712-103.536h207.424c-.08 57.184-46.464 103.535-103.712 103.535zm358.384-171.665H157.006c-4.896 0-8.991-.16-12.367-.368c6.592-10.208 16.271-23.248 24.143-33.857c38.993-52.4 104.145-126.368 104.145-213.424v-208.96c0-142.464 103.04-258.352 237.521-258.352S749.01 185.12 749.01 327.584v208.96c0 90.016 60.08 165.248 103.968 218.608c7.392 8.993 16.24 19.76 23.12 28.96c-2.033.048-4.273.08-6.705.08z"/></svg>
@@ -187,7 +189,7 @@
                 <div class="film-selection__section-header section-header">
                     <a href="#" class="section-header__title-box">
                         <h3 class="section-header__title">Trending Now</h3>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m8 20l8-8l-8-8"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M6.23 20.23L8 22l10-10L8 2L6.23 3.77L14.46 12z"/></svg>
                     </a>
                     
                     <a href="#" class="section-header__btn-view-all">View all</a>
@@ -248,15 +250,16 @@
                                 <span class="rating__value">7.1</span>
                             </div>
                         </a>
+                    </div>
                 </div>
             </section>
 
             <section class="film-selection">
                 <div class="film-selection__section-header section-header">
-                    <button class="section-header__title-box">
+                    <a href="#" class="section-header__title-box">
                         <h3 class="section-header__title">Popular This Week</h3>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m8 20l8-8l-8-8"/></svg>
-                    </button>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M6.23 20.23L8 22l10-10L8 2L6.23 3.77L14.46 12z"/></svg>
+                    </a>
                     
                     <a href="#" class="section-header__btn-view-all">View all</a>
                 </div>
@@ -340,7 +343,9 @@
                             </div>
                         </a>
                         <button class="widget-panel__item-btn" aria-label="remove from watchlist">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="M18 2H6c-1.103 0-2 .897-2 2v18l8-4.572L20 22V4c0-1.103-.897-2-2-2m0 16.553l-6-3.428l-6 3.428V4h12z"/></svg>
+                            <svg viewBox="0 0 24 24" width="24" height="24">
+                                <path d="M17 3H7c-1.1 0-2 .9-2 2v16l7-3 7 3V5c0-1.1-.9-2-2-2z" />
+                            </svg>
                         </button>
                     </li>
 
@@ -355,7 +360,9 @@
                             </div>
                         </a>
                         <button class="widget-panel__item-btn" aria-label="remove from watchlist">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="M18 2H6c-1.103 0-2 .897-2 2v18l8-4.572L20 22V4c0-1.103-.897-2-2-2m0 16.553l-6-3.428l-6 3.428V4h12z"/></svg>
+                            <svg viewBox="0 0 24 24" width="24" height="24">
+                                <path d="M17 3H7c-1.1 0-2 .9-2 2v16l7-3 7 3V5c0-1.1-.9-2-2-2z" />
+                            </svg>
                         </button>
                     </li>
 
@@ -370,7 +377,9 @@
                             </div>
                         </a>
                         <button class="widget-panel__item-btn" aria-label="remove from watchlist">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="M18 2H6c-1.103 0-2 .897-2 2v18l8-4.572L20 22V4c0-1.103-.897-2-2-2m0 16.553l-6-3.428l-6 3.428V4h12z"/></svg>
+                            <svg viewBox="0 0 24 24" width="24" height="24">
+                                <path d="M17 3H7c-1.1 0-2 .9-2 2v16l7-3 7 3V5c0-1.1-.9-2-2-2z" />
+                            </svg>
                         </button>
                     </li>
 

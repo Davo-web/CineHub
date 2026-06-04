@@ -28,10 +28,11 @@
         &.active {
             background-color: var(--color-bg-active);
             border-radius: $radius-md;
+            color: var(--color-element-active);
+        }
 
-            & .sidebar__link  {
-                color: var(--color-element-active);
-            }
+        &:hover {
+            color: var(--color-element-active);
         }
     }
 

@@ -77,6 +77,25 @@
         font-size: $font-base;
     }
 
+    &__link-item {
+        position: relative;
+        &:after {
+            position: absolute;
+            width: 0%;
+            content: '';
+            height: 1.5px;
+            background-color: var(--color-element-active);
+            bottom: -2px;
+            left: 0;
+
+            transition: width .2s ease-in-out;
+        }
+
+        &:hover:after {
+            width: 100%;
+        }
+    }
+
     &__links {
         display: flex;
         align-items: center;

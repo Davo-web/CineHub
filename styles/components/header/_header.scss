@@ -1,8 +1,52 @@
 @use '../../mixins' as *;
 
-header {
+.header {
     width: 100%;
     @include flex-center($justify: space-between);
     padding: 20px 40px;
     gap: 20px;
+
+    &-main {
+        @include flex-center;
+        gap: 20px;
+    }
+
+    &-actions {
+        @include flex-center;
+        gap: 30px;
+
+        @include large-phone {
+            gap: 15px;
+        }
+
+        &__notifications {
+            @include flex-center;
+
+            &-icon {
+                flex-shrink: 0;
+                &:hover {
+                    color: var(--color-element-active)
+                }
+            }
+        }
+
+        &__settings {
+            @include flex-center;
+            gap: 8px;
+
+            &-icon {
+                flex-shrink: 0;
+                &:hover {
+                    color: var(--color-element-active)
+                }
+            }
+
+            &-arrow {
+                @include small-desktop {
+                    display: none;
+                    overflow: hidden;
+                }
+            }
+        }
+    }
 }

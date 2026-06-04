@@ -40,16 +40,37 @@
         @include flex-center;
         gap: 5px;
 
+        &:hover {
+            color: var(--color-element-active);
+        }
+
         & svg {
             height: 15px;
         }
     }
 
     &__btn-view-all {
+        position: relative;
         font-size: $font-base;
         text-align: center;
         &, &:link, &:visited {
             color: var(--color-element-active);
+        }
+
+        &:after {
+            position: absolute;
+            width: 0%;
+            content: '';
+            height: 1.5px;
+            background-color: var(--color-element-active);
+            bottom: -2px;
+            left: 0;
+
+            transition: width .2s ease-in-out;
+        }
+
+        &:hover:after {
+            width: 100%;
         }
     }
 }

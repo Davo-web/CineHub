@@ -23,10 +23,15 @@
 
     &__icon {
         position: absolute;
-        left: 65px;
+        left: 15px;
         top: 50%; // элемент опускается так, что его верхний край находится посередине родителя.
         transform: translateY(-50%); // сдвигает сам элемент вверх на половину его собственной высоты.
         pointer-events: none;      /* Чтобы клик проходил сквозь иконку в инпут */
+
+        @include large-desktop {
+            // left: 65px;
+            left: 15px;
+        }
     }
 
     &__btn {

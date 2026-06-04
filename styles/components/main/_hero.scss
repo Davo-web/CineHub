@@ -66,6 +66,11 @@
         color: var(--color-text);
         font-size: $font-base;
         gap: 5px;
+        transition: transform .2s ease;
+
+        &:hover {
+            transform: translateY(-3px);
+        }
 
         &--play {
             background-color: var(--color-element-active);
