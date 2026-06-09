@@ -1,0 +1,59 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+}
+
+.app-container {
+    display: grid;
+    grid-template-columns: 1fr 4fr 1.4fr;
+    grid-template-rows: 70px 1fr;
+    grid-template-areas: 
+    "sidebar header header"
+    "sidebar main widget-panel";
+    @include large-desktop {
+        grid-template-columns: 4fr 1.4fr;
+        grid-template-rows: 70px 1fr;
+        grid-template-areas: 
+        "header header"
+        "main widget-panel";
+    }
+
+    @include small-desktop {
+        grid-template-columns: 1fr;
+        grid-template-rows: 70px 1fr;
+        grid-template-areas: 
+        "header"
+        "main";
+    }
+}
+
+.header {
+    grid-area: header;
+    /* background-color: #ff0000; */
+}
+
+.sidebar {
+    grid-area: sidebar;
+}
+
+main {
+    grid-area: main;
+    // background-color: #131878;
+}
+
+.widget-panel {
+    // background-color: #00ff26;
+    grid-area: widget-panel;
+}
+
+.divider {
+    margin: 15px auto;
+    width: 80%;
+    height: 1px;
+    opacity: .1;
+    background-color: var(--color-text);
+}
