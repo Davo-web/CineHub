@@ -3,10 +3,12 @@
 .burger-menu {
     width: 35px;
     height: 22px;
-    display: none; // flex
+    display: none; 
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    position: relative;
+    cursor: pointer;
     
     @include large-desktop {
         display: flex;
@@ -17,5 +19,25 @@
         height: 3px;
         background-color: var(--color-text);
         border-radius: 100px;
+        transition: transform 0.3s ease, top 0.3s ease;
+    }
+
+    &--close {
+        margin-right: 10px;
+        justify-content: center;
+
+        .burger-menu__line {
+            position: absolute;
+            // Высчитываем центр: (высота меню 22px - высота линии 3px) / 2 = 9.5px
+            top: calc(50% - 1.5px); 
+        }
+
+        .burger-menu__first-line {
+            transform: rotate(45deg);
+        }
+
+        .burger-menu__second-line {
+            transform: rotate(-45deg);
+        }
     }
 }

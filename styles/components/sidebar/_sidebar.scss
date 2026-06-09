@@ -11,9 +11,24 @@
     padding: 20px 15px 0;
     background-color: var(--color-bg2);
 
+    transition: left .4s ease;
+
     @include large-desktop {
-        display: none;
-        overflow: hidden;
+        position: fixed;
+        left: -500px;
+    }
+
+    &.visible {
+        position: fixed;
+        width: 250px;
+        left: 0;
+        top: 0;
+        overflow: visible;
+        z-index: 2;
+
+        .logo {
+            padding-left: 25px;
+        }
     }
 
     &__list {
@@ -24,10 +39,12 @@
 
     &__item {
         padding: 5px 10px;
+        border-radius: $radius-md;
+
+        transition: background .3s ease;
 
         &.active {
             background-color: var(--color-bg-active);
-            border-radius: $radius-md;
             color: var(--color-element-active);
         }
 
@@ -50,6 +67,8 @@
     }
 
     &__theme-btn {
+        position: absolute;
+        bottom: 20px;
         margin-top: 15px;
         @include flex-center;
         align-self: center;
@@ -60,9 +79,17 @@
         width: 90%;
         font-size: $font-base;
 
+        display: flex;
+        visibility: visible;
+
         & svg {
             width: 25px;
             height: 25px;
+        }
+
+        &.hidden {
+            display: none;
+            visibility: hidden;
         }
     }
 }

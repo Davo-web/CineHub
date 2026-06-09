@@ -3,8 +3,6 @@
 
 .search {
     position: relative;
-    width: 100%;
-    max-width: 400px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -29,7 +27,6 @@
         pointer-events: none;      /* Чтобы клик проходил сквозь иконку в инпут */
 
         @include large-desktop {
-            // left: 65px;
             left: 15px;
         }
     }
@@ -42,6 +39,10 @@
         margin: auto 0; 
         right: 15px;
         @include flex-center;
+        transition: color .2s ease;
+        &:hover {
+            color: var(--color-element-active);
+        }
     }
 }
 

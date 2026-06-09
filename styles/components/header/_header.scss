@@ -1,7 +1,7 @@
 @use '../../mixins' as *;
+@use '../../variables' as *;
 
 .header {
-    width: 100%;
     @include flex-center($justify: space-between);
     padding: 20px 40px;
     gap: 20px;
@@ -13,39 +13,150 @@
 
     &-actions {
         @include flex-center;
-        gap: 30px;
-
-        @include large-phone {
-            gap: 15px;
-        }
-
-        &__notifications {
-            @include flex-center;
-
-            &-icon {
-                flex-shrink: 0;
-                &:hover {
-                    color: var(--color-element-active)
-                }
-            }
-        }
 
         &__settings {
             @include flex-center;
-            gap: 8px;
 
             &-icon {
                 flex-shrink: 0;
+                transition: color .2s ease, transform .4s ease;
                 &:hover {
-                    color: var(--color-element-active)
+                    color: var(--color-element-active);
+                    transform: rotate(-90deg);
                 }
             }
 
-            &-arrow {
-                @include small-desktop {
-                    display: none;
-                    overflow: hidden;
+            &-window {
+                position: absolute;
+                width: 450px;
+                height: 500px;
+                z-index: 2; 
+                background-color: var(--color-bg2);
+                top: 0;
+                left: calc(50% - 250px);
+                bottom: 0;
+                margin: auto 0; 
+
+                flex-direction: column;
+                border-radius: 15px;
+                padding: 20px;
+
+                .section-header {
+                    &__title {
+                        font-size: $font-md;
+                    }
+
+                    &__btn {
+                        width: 30px;
+                        height: 30px;
+                        transition: transform .2s ease-in-out;
+                        &:hover {
+                            transform: rotateZ(-90deg);
+                        }
+
+                        & svg {
+                            width: 30px;
+                            transform: rotateZ(45deg);
+                        }
+                    } 
+                    
                 }
+
+                .divider {
+                    width: 100%;
+                }
+
+                .section-header__btn:hover {
+                    color: var(--color-element-active);
+                }
+
+                
+            }
+
+            &-window {
+                display: none;
+                &.active {
+                    display: flex;
+                    position: fixed;
+                }
+            }
+        }
+
+
+        .settings-window {
+            display: none;
+            &__title {
+                margin-bottom: 10px;
+            }
+
+            &__subtitle {
+                font-size: $font-base;
+                margin-bottom: 10px;
+            }
+
+            &__btns {
+                display: flex;
+                align-items: center;
+                gap: 20px;
+            }
+
+            &__data-management {
+                display: flex;
+                flex-direction: column;
+
+                .settings-window__btns {
+                    flex-direction: column;
+                    align-items: baseline;
+                }
+
+                .first-btn, .second-btn {
+                    padding: 0 20px;
+                    display: flex;
+                    justify-content: start;
+                    flex-direction: row;
+                    gap: 10px;
+                    width: 100%;
+                    height: 80px;
+                    text-align: left;
+                }
+
+                & svg {
+                    width: 30px;
+                    height: 30px;
+                }
+
+                .btn__text {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 5px;
+
+                    &-subtitle {
+                        font-size: $font-sm;
+                    }
+                }
+            }
+        }
+
+
+
+        .first-btn, .second-btn {
+            @include flex-center;
+            flex-direction: column;
+            gap: 5px;
+            width: 100px;
+            height: 100px;
+            outline: 2px solid var(--color-element-active);
+            border-radius: 10px;
+
+            transition: background .3s ease, transform .3s ease;
+
+            &:hover {
+                background-color: var(--color-element-active);
+            }
+
+            &.active {
+                background-color: var(--color-element-active);
+                transform: scale(0.95);
             }
         }
     }

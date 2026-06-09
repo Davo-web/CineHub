@@ -106,7 +106,7 @@
 
         svg {
             width: 40px;
-            transition: color .2s ease-in;
+            transition: color .1s ease-in;
             &:hover {
                 color: var(--color-element-active);
             }
