@@ -1,5 +1,39 @@
-@use '../variables' as *;
-@use '../mixins' as *;
+@use 'variables' as *;
+@use 'mixins' as *;
+
+html[data-theme = 'light'] {
+    .hero {
+        &__slide {
+            color: var(--color-black);
+            background-image: linear-gradient(to right, 
+                    #d7d7d7 0%, 
+                    transparent 80%),
+                    url('../img/slide__duna-bg.png');
+        }
+
+        &__btn--explore {
+            color: var(--color-white);
+        }
+
+        &__dot {
+            background-color: var(--color-bg3);
+
+            &--active {
+                background-color: var(--color-element-active);
+                width: 18px;
+            }
+        }
+
+        .rating {
+            font-weight: 400;
+        }
+    }
+
+    .rating {
+        background-color: #d1cece;
+        font-weight: 700;
+    }
+}
 
 body {
     font-family: 'Inter', sans-serif;

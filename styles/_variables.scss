@@ -7,7 +7,20 @@
     --color-element-active: #8370F0;
     --color-bg3: #1D222D;
     --color-black: #000;
+
+    &[data-theme="light"] {
+        --color-bg: #F0F2F8;
+        --color-text: #0D1117;
+        --color-subtext: #5C6880;
+        --color-bg2: #E4E7F2;
+        --color-bg-active: #bfb6ff;
+        --color-element-active: #563ade;
+        --color-bg3: #ffffff;
+        --color-black: #000;
+        --color-white: #fff;
+    }
 }
+
 
 $radius-sm: 8px;
 $radius-md: 10px;

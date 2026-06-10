@@ -10,6 +10,39 @@
   --color-bg3: #1D222D;
   --color-black: #000;
 }
+:root[data-theme=light] {
+  --color-bg: #F0F2F8;
+  --color-text: #0D1117;
+  --color-subtext: #5C6880;
+  --color-bg2: #E4E7F2;
+  --color-bg-active: #bfb6ff;
+  --color-element-active: #563ade;
+  --color-bg3: #ffffff;
+  --color-black: #000;
+  --color-white: #fff;
+}
+
+html[data-theme=light] .hero__slide {
+  color: var(--color-black);
+  background-image: linear-gradient(to right, #d7d7d7 0%, transparent 80%), url("../img/slide__duna-bg.png");
+}
+html[data-theme=light] .hero__btn--explore {
+  color: var(--color-white);
+}
+html[data-theme=light] .hero__dot {
+  background-color: var(--color-bg3);
+}
+html[data-theme=light] .hero__dot--active {
+  background-color: var(--color-element-active);
+  width: 18px;
+}
+html[data-theme=light] .hero .rating {
+  font-weight: 400;
+}
+html[data-theme=light] .rating {
+  background-color: #d1cece;
+  font-weight: 700;
+}
 
 body {
   font-family: "Inter", sans-serif;
@@ -526,7 +559,7 @@ main {
 .hero__btn:hover {
   transform: translateY(-3px);
 }
-.hero__btn--play {
+.hero__btn--explore {
   background-color: var(--color-element-active);
 }
 .hero__btn--watchlist {

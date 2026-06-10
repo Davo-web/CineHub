@@ -1,7 +1,9 @@
-import { burgerBtn } from './burger.js';
-import { settingsBtnClick } from './settingsBtn.js';
-import { itemClick } from './sidebarNav.js';
-import { themeBtnClick } from './themeBtn.js';
+import { burgerBtn } from './ui/burger.js';
+import { settingsBtnClick } from './ui/settingsBtn.js';
+import { itemClick } from './ui/sidebarNav.js';
+import { themeBtnClick } from './ui/themeBtn.js';
+import { apiFetch } from './api/api.js';
+apiFetch();
 burgerBtn();
 settingsBtnClick();
 itemClick();

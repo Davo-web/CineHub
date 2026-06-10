@@ -1,9 +1,12 @@
 import { settingsWindow } from './settingsBtn.js';
+import { getThemeFromLS, saveThemeToLS  } from '../utils/localstorage.js';
 export function themeBtnClick () {
 
     const buttons = document.querySelectorAll('.sidebar__theme-btn');
 
-    if (!localStorage.getItem('theme') || localStorage.getItem('theme') === 'dark') {
+    let theme = getThemeFromLS('theme');
+
+    if (!theme || theme === 'dark') {
         // установка дефолтного значения в случае пустого LocalStorage
         changeLS('dark');
         changeActiveClass('dark');
@@ -11,17 +14,18 @@ export function themeBtnClick () {
             buttons.forEach(element => element.classList.toggle('hidden'));
         }
     }
-    else if (localStorage.getItem('theme') === 'light') {
+    else if (theme === 'light') {
         if (document.querySelector('.sidebar__theme-btn.light.hidden')) {
             buttons.forEach(element => element.classList.toggle('hidden'));
         }
         changeActiveClass('light');
+        changeLS('light');
     }
 
 
     buttons.forEach((element) => {
         element.addEventListener('click', () => {
-            if (localStorage.getItem('theme') === 'dark') {
+            if (getThemeFromLS('theme') === 'dark') {
                 // Меняем на light
                 changeLS('light');
                 buttons.forEach(element => element.classList.toggle('hidden'));
@@ -58,7 +62,8 @@ export function themeBtnClick () {
     });
 
     function changeLS(mode) {
-        localStorage.setItem("theme", mode);
+        saveThemeToLS("theme", mode);
+        document.documentElement.setAttribute('data-theme', mode);
     }
 
     function changeActiveClass(mode) {
