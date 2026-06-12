@@ -3,12 +3,12 @@
 
 html[data-theme = 'light'] {
     .hero {
+        &__title {
+            color: var(--color-white);
+        }
+
         &__slide {
-            color: var(--color-black);
-            background-image: linear-gradient(to right, 
-                    #d7d7d7 0%, 
-                    transparent 80%),
-                    url('../img/slide__duna-bg.png');
+            color: var(--color-subtext-hero);
         }
 
         &__btn--explore {
@@ -24,8 +24,12 @@ html[data-theme = 'light'] {
             }
         }
 
-        .rating {
+        & .rating {
             font-weight: 400;
+            background: none;
+            &__value {
+                color: var(--color-subtext-hero);
+            }
         }
     }
 

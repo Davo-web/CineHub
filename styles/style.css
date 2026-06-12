@@ -20,11 +20,14 @@
   --color-bg3: #ffffff;
   --color-black: #000;
   --color-white: #fff;
+  --color-subtext-hero: #BDC4D0;
 }
 
+html[data-theme=light] .hero__title {
+  color: var(--color-white);
+}
 html[data-theme=light] .hero__slide {
-  color: var(--color-black);
-  background-image: linear-gradient(to right, #d7d7d7 0%, transparent 80%), url("../img/slide__duna-bg.png");
+  color: var(--color-subtext-hero);
 }
 html[data-theme=light] .hero__btn--explore {
   color: var(--color-white);
@@ -38,6 +41,10 @@ html[data-theme=light] .hero__dot--active {
 }
 html[data-theme=light] .hero .rating {
   font-weight: 400;
+  background: none;
+}
+html[data-theme=light] .hero .rating__value {
+  color: var(--color-subtext-hero);
 }
 html[data-theme=light] .rating {
   background-color: #d1cece;
@@ -134,12 +141,18 @@ main {
   z-index: 2;
   background-color: var(--color-bg2);
   top: 0;
-  left: calc(50% - 250px);
+  left: calc(50% - 225px);
   bottom: 0;
   margin: auto 0;
   flex-direction: column;
   border-radius: 15px;
   padding: 20px;
+}
+@media (max-width: 595px) {
+  .header-actions__settings-window {
+    width: 300px;
+    left: calc(50% - 150px);
+  }
 }
 .header-actions__settings-window .section-header__title {
   font-size: 18px;
@@ -502,7 +515,6 @@ main {
 }
 .hero__slide {
   width: 100%;
-  background-image: linear-gradient(to right, #0b0f19 0%, transparent 80%), url("../img/slide__duna-bg.png");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -529,11 +541,6 @@ main {
   align-items: center;
   gap: 18px;
   font-size: 14px;
-}
-.hero__age-limit {
-  padding: 6px;
-  background-color: var(--color-bg2);
-  border-radius: 10px;
 }
 .hero__description {
   font-size: 14px;

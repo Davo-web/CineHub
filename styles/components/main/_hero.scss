@@ -5,11 +5,6 @@
     position: relative;
     &__slide {
         width: 100%;
-        background-image: linear-gradient(to right, 
-                    #0b0f19 0%, 
-                    transparent 80%),
-                    url('../img/slide__duna-bg.png');
-
         background-position: center center;
         background-size: cover;
         background-repeat: no-repeat;
@@ -39,12 +34,6 @@
         align-items: center;
         gap: 18px;
         font-size: $font-base;
-    }
-
-    &__age-limit {
-        padding: 6px;
-        background-color: var(--color-bg2);
-        border-radius: $radius-md;
     }
 
     &__description {
