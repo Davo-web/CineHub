@@ -3,8 +3,30 @@
 
 .hero {
     position: relative;
-    &__slide {
+    max-width: 60vw;
+    @include large-desktop {
+        min-width: 70vw;
+    }
+    @include small-desktop {
+        min-width: 100%;
+        max-height: 400px;
+    }
+
+    &__slider-track {
         width: 100%;
+        display: flex;
+        overflow: hidden;
+        scrollbar-width: none;
+        border-radius: $radius-md;
+        max-height: 400px;
+        scroll-snap-type: x mandatory;
+    }
+
+    &__slide {
+        flex: 0 0 100%;    /* Запрещает сжатие и задает ширину ровно 100% от трека */
+        scroll-snap-align: center; 
+        width: 100%;
+        max-height: 400px;
         background-position: center center;
         background-size: cover;
         background-repeat: no-repeat;
@@ -39,6 +61,11 @@
     &__description {
         font-size: $font-base;
         width: 45%;
+
+        @include medium-phone {
+            display: none;
+            visibility: hidden;
+        }
     }
 
     &__btns {
@@ -80,7 +107,23 @@
 
         @include large-phone {
             display: none;
-            overflow: hidden;
+            visibility: hidden;
+        }
+
+        &.pagination-small-screen {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: static;
+            display: none;
+            visibility: hidden;
+            margin-top: 20px;
+
+            @include large-phone {
+                display: flex;
+                visibility: visible;
+                gap: 15px;
+            }
         }
     }
 
@@ -89,10 +132,24 @@
         height: 6px;
         background-color: var(--color-text);
         border-radius: $radius-md;
+        transition: width .25s ease;
+
+        @include large-phone {
+            background-color: var(--color-bg3);
+            color: var(--color-element-active);
+            width: 35px;
+            height: 35px;
+        }
 
         &--active {
             background-color: var(--color-element-active);
             width: 18px;
+
+            @include large-phone {
+                color: var(--color-white);
+                width: 45px;
+                height: 35px;
+            }
         }
     }
 }

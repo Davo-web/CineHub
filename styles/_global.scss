@@ -21,6 +21,10 @@ html[data-theme = 'light'] {
             &--active {
                 background-color: var(--color-element-active);
                 width: 18px;
+
+                @include large-phone {
+                    width: 45px;
+                }
             }
         }
 

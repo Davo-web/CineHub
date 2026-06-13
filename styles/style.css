@@ -39,6 +39,11 @@ html[data-theme=light] .hero__dot--active {
   background-color: var(--color-element-active);
   width: 18px;
 }
+@media (max-width: 760px) {
+  html[data-theme=light] .hero__dot--active {
+    width: 45px;
+  }
+}
 html[data-theme=light] .hero .rating {
   font-weight: 400;
   background: none;
@@ -512,9 +517,33 @@ main {
 
 .hero {
   position: relative;
+  max-width: 60vw;
+}
+@media (max-width: 1400px) {
+  .hero {
+    min-width: 70vw;
+  }
+}
+@media (max-width: 1150px) {
+  .hero {
+    min-width: 100%;
+    max-height: 400px;
+  }
+}
+.hero__slider-track {
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  scrollbar-width: none;
+  border-radius: 10px;
+  max-height: 400px;
+  scroll-snap-type: x mandatory;
 }
 .hero__slide {
+  flex: 0 0 100%; /* Запрещает сжатие и задает ширину ровно 100% от трека */
+  scroll-snap-align: center;
   width: 100%;
+  max-height: 400px;
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -545,6 +574,12 @@ main {
 .hero__description {
   font-size: 14px;
   width: 45%;
+}
+@media (max-width: 595px) {
+  .hero__description {
+    display: none;
+    visibility: hidden;
+  }
 }
 .hero__btns {
   display: flex;
@@ -583,7 +618,23 @@ main {
 @media (max-width: 760px) {
   .hero__pagination {
     display: none;
-    overflow: hidden;
+    visibility: hidden;
+  }
+}
+.hero__pagination.pagination-small-screen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: static;
+  display: none;
+  visibility: hidden;
+  margin-top: 20px;
+}
+@media (max-width: 760px) {
+  .hero__pagination.pagination-small-screen {
+    display: flex;
+    visibility: visible;
+    gap: 15px;
   }
 }
 .hero__dot {
@@ -591,10 +642,26 @@ main {
   height: 6px;
   background-color: var(--color-text);
   border-radius: 10px;
+  transition: width 0.25s ease;
+}
+@media (max-width: 760px) {
+  .hero__dot {
+    background-color: var(--color-bg3);
+    color: var(--color-element-active);
+    width: 35px;
+    height: 35px;
+  }
 }
 .hero__dot--active {
   background-color: var(--color-element-active);
   width: 18px;
+}
+@media (max-width: 760px) {
+  .hero__dot--active {
+    color: var(--color-white);
+    width: 45px;
+    height: 35px;
+  }
 }
 
 .film-selection {
@@ -603,6 +670,16 @@ main {
   padding-right: 15px;
   gap: 15px;
   margin-bottom: 15px;
+}
+@media (max-width: 760px) {
+  .film-selection {
+    margin-top: 40px;
+  }
+}
+@media (max-width: 595px) {
+  .film-selection {
+    margin-top: 0px;
+  }
 }
 .film-selection__box {
   display: flex;

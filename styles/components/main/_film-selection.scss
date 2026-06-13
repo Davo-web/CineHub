@@ -8,6 +8,14 @@
     gap: 15px;
     margin-bottom: 15px;
 
+    @include large-phone { 
+        margin-top: 40px;
+    }
+
+    @include medium-phone {
+        margin-top: 0px;
+    }
+
     &__box {
         display: flex;
         align-items: center;
