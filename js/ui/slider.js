@@ -18,11 +18,13 @@ export function slider () {
         for (let i = 0; i < dots.length; i++) {
             if (event.target === dots[i]) {
                 currentIndex = i;
-                slides[currentIndex].scrollIntoView({ 
-                    behavior: 'smooth', 
-                    block: 'nearest', 
-                    inline: 'center' 
+                
+                const container = slides[currentIndex].parentElement;
+                container.scrollTo({
+                    left: slides[currentIndex].offsetLeft,
+                    behavior: 'smooth'
                 });
+
                 dots.forEach(el => el.classList.remove('hero__dot--active'));
                 dots[currentIndex].classList.add('hero__dot--active');
             }
@@ -34,10 +36,10 @@ export function slider () {
         currentIndex = (currentIndex + 1) % slides.length;
 
         // Прокручиваем к текущему слайду
-        slides[currentIndex].scrollIntoView({ 
-            behavior: 'smooth', 
-            block: 'nearest', 
-            inline: 'center' 
+        const container = slides[currentIndex].parentElement;
+        container.scrollTo({
+            left: slides[currentIndex].offsetLeft,
+            behavior: 'smooth'
         });
         dots.forEach(el => el.classList.remove('hero__dot--active'));
         dots[currentIndex].classList.add('hero__dot--active');
