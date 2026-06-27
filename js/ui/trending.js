@@ -9,7 +9,7 @@ export async function renderTrending() {
         movies.forEach(movie => {
             const imgUrl = `https://image.tmdb.org/t/p/w500${movie.poster_path}`
             const cardHtml = `
-                <a href="#" class="movie-card">
+                <a href="#/movie/${movie.id}" class="movie-card">
                     <img src="${imgUrl}" alt="${movie.title}" class="movie-card__img">
                     <h4 class="movie-card__title">${movie.title}</h4>
                     <div class="rating">

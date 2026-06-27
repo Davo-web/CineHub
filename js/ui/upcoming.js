@@ -12,7 +12,7 @@
                 const year = movieInfo.release_date.slice(0, 4);
                 const movieHtml = `
                 <li class="widget-panel__item">
-                    <a href="#">
+                    <a href="#/movie/${movieInfo.id}">
                         <div class="widget-panel__film-info upcoming-movie-box">
                             <img src="${urlImg}" alt="${title}">
                             <div class="widget-panel__film-text">

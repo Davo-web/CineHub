@@ -59,10 +59,10 @@ export async function renderHero() {
         
     }
     catch {
-        document.querySelector('.hero__pagination').style.display = 'none';
-        document.querySelector('.hero .rating__img').style.display = 'none';
-        document.querySelector('.hero__btns').style.display = 'none';
-        document.querySelector('.hero__badge').style.display = 'none';
+        const el1 = document.querySelector('.hero__pagination'); if (el1) el1.style.display = 'none';
+        const el2 = document.querySelector('.hero .rating__img'); if (el2) el2.style.display = 'none';
+        const el3 = document.querySelector('.hero__btns'); if (el3) el3.style.display = 'none';
+        const el4 = document.querySelector('.hero__badge'); if (el4) el4.style.display = 'none';
         hero.insertAdjacentHTML('beforeend', `<span class="loading-error">Failed to load movie</span>`);
     }
 }
