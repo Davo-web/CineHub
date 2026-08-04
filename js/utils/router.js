@@ -1,17 +1,22 @@
-import { renderFilmPage } from "../ui/pages/renderFilmPage.js";
+import { renderFilmPage } from "../ui/pages/film.js";
 
 export function rout() {
     window.addEventListener('hashchange', () => {
-        if (window.location.hash === '#/') {
-            // Render the home page or perform any necessary actions for the home route
+        const hash = window.location.hash;
+        if (hash === '' || hash === '#/') {
+            // рендер home page или перегазгрузка страницы для попадания в home
             location.reload();
         }
-        const hash = window.location.hash;
+
         const match = hash.match(/^#\/movie\/(\d+)$/);
         if (match) {
             const movieId = parseInt(match[1]);
             renderFilmPage(movieId);
         }
+
+        // if (hash === '#/discover') {
+        //     // ... рендер discover page
+        // }
         window.scrollTo(0, 0); // чтобы при переходе не оставался старый скролл
     });
 } 
